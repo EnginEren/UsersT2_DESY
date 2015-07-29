@@ -7,7 +7,7 @@ cat $NFS/input/$INPUT_file | awk '{if ($10 == "0" && $7 !~ 2015) print $5}' | gr
 cat $NFS/input/$INPUT_file | awk '{if ($10 == "0" && $7 !~ 2015) print $5}'  > filename
 cat $NFS/input/$INPUT_file | awk '{if ($10 == "0" && $7 !~ 2015) print $3}'  > size
 
-paste user filename | awk '{print $1,$2}' | sort -n > $NFS/output_T2Users//user.files_billing.txt
+paste user filename | awk '{print $1,$2}' | sort -n > $NFS/output_T2Users/user.files_billing.txt
 paste user filename size | awk '{print $1,$2,$3}' | sort -n > $NFS/output_T2Users/user.files_billing_size.txt
 
 rm user
